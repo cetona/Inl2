@@ -1,7 +1,7 @@
 Uppgift 1	-  σ sport == 'Boule' (sp)
 Uppgift 2	-  σ antal <45 (tf)
 Uppgift 3	-  π namn (σ ford == 'Cykel' (f))
-Uppgift 4 	-  π namn ((σ land == 'Belgien' (b)) ⋈(pb))
+Uppgift 4 	-  π namn, beer ((σ land == 'Belgien' (b)) ⋈(pb))
 Uppgift 5	-  π namn (σ sport == 'Bowling' and nickname == 'SUP' (sp⋈k⋈uv))
 Uppgift 6	-  π sport(sp) - (σ sport (σ sport == sportx and namn != namnx (( ρ sport ➡ sportx, namn ➡ namnx (sp)) * (sp))))
 Uppgift 7   -  d1 = π namn (σ ford == 'GL' (f)) 
@@ -32,7 +32,7 @@ u5 = π knamn (σ kkod (u4)⋈k)
 
 Uppgift 13:
 namn1 = π sysnr (σ sysnr (σ land=='Danmark' (b)))
-namn2 = π namn (σ sysnr (namn2) ⋈pb)
+namn2 = π namn (σ sysnr (namn1) ⋈pb)
 namn3 = π namn (σ namn (σ sport =='Jogging' (sp)))
 namn4 = π namn (σ namn (σ ford =='Bil' (f)))
 namn5 = π namn (σ namn (namn2)⋈(namn3)) - (σ namn (namn4))
@@ -55,6 +55,9 @@ tf9 = π beer (b⋈pb⋈uv⋈tf⋈tf8)
 Uppgift 17:
 c1 = π namn (uv) - π namn (ρ kansv  namn(tf))
 Svar: 	π rum (p⋈c1)
+
+Uppgift 18
+π namn(uv) - π namn (σ termin >= 'ht2010' and termin <= 'ht2011' or termin >= 'vt2011' and termin <= 'vt2012'(uv))
 
 Uppgift 20: 
 del1 = π liter (pb)
